@@ -13,3 +13,9 @@ npx jest --init
 npm i uuid --save-dev
 
 npm i --save-dev @types/uuid
+
+npm i --save-dev @types/node @types/validator
+
+npm i sequelize reflect-metadata sequelize-typescript
+
+npm i sqlite3

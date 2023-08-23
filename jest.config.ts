@@ -7,7 +7,7 @@ import type {Config} from 'jest';
 
 const config: Config = {
   transform: {
-    "\\.[tj]sx?$/": "@swc/jest",
+    "^.+\\.(t|j)sx?$": "@swc/jest",
   },
   // All imported modules in your tests should be mocked automatically
   // automock: false,
