@@ -1,8 +1,25 @@
 import Id from "../../../@shared/domain/value-object/id.value-object";
 import Product from "../../domain/product.entity";
 import ProductGateway from "../../gateway/product.gateway";
-import { AddProductInputDto, AddProductOutputDto } from "./add-product.dto";
 
+export interface AddProductInputDto {
+    id?: string;
+    name: string;
+    description: string;
+    purchasePrice: number;
+    stock: number;
+  }
+  
+  export interface AddProductOutputDto {
+      id: string;
+      name: string;
+      description: string;
+      purchasePrice: number;
+      stock: number;
+      createdAt: Date;
+      updateAt: Date;
+    }
+    
 export default class AddProductUseCase {
     private _productRepository: ProductGateway;
 

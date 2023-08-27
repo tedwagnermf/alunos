@@ -1,14 +1,60 @@
+****************************** Vídeo: Configurando o projeto typescript
+
 npm i typescript --save-dev
-npx tsc --init
+npx tsc --init             
+
+tsconfig.ts:
+------------
+"incremental": true
+"target": "es6", //sequelize-typescript
+"experimentalDecorators": true,
+"emitDecoratorMetadata": true,
+"module": "commonjs",
+"outDir": "./dist",
+"esModuleInterop": true,
+"forceConsistentCasingInFileNames": true,
+"strict": true,
+"strictNullChecks": false, 
+"skipLibCheck": true,
+,
+  "include": [
+    "src/**/*.ts"
+  ],
 
 npm i tslint --save-dev
 npx tslint --init
 
-npm i -D jest @types/jest ts-node --save-dev 
+****************************** Vídeo: Preparando ambiente com testes
 
+npm i -D jest @types/jest ts-node --save-dev
 npm i -D @swc/jest @swc/cli @swc/core
-
 npx jest --init
+
+jest.config.ts:
+---------------
+transform: {
+    "^.+\\.(t|j)sx?$": "@swc/jest",
+  },
+
+.swcrc:
+-------
+{
+    "jsc" : {
+        "parser": {
+            "syntax": "typescript",
+            "decorators": true
+        },
+        "transform": {
+            "legacyDecorator": true,
+            "decoratorMetadata": true
+        }
+    }
+}
+****************************** Vídeo: Configurando sequelize
+
+npm i sequelize reflect-metadata sequelize-typescript
+
+npm i sqlite3
 
 npm i uuid --save-dev
 
@@ -16,6 +62,3 @@ npm i --save-dev @types/uuid
 
 npm i --save-dev @types/node @types/validator
 
-npm i sequelize reflect-metadata sequelize-typescript
-
-npm i sqlite3
