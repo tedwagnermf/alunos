@@ -1,5 +1,3 @@
-import { ProductModel } from "../../repository/product.model";
-import ProductRepository from "../../repository/product.repository";
 import AddProductUseCase from "./add-product.usecase";
 
 const MockRepository = () => {
