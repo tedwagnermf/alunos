@@ -1,4 +1,4 @@
-import { FindClientInputDto } from "../usecase/Client.usecase.dto";
+import { FindClientInputDto } from "../usecase/client.usecase.dto";
 
 export interface AddClientFacadeInputDto {
     id?: string;

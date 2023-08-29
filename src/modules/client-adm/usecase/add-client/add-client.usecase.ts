@@ -2,7 +2,7 @@ import { ClientRequest } from "http";
 import Id from "../../../@shared/domain/value-object/id.value-object";
 import Client from "../../domain/client.entity";
 import ClientGateway from "../../gateway/client.gateway";
-import { AddClientInputDto, AddClientOutput } from "../Client.usecase.dto";
+import { AddClientInputDto, AddClientOutput } from "../client.usecase.dto";
 
 export default class AddClientUseCase {
     private _repository: ClientGateway;
