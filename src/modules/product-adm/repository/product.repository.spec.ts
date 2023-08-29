@@ -50,8 +50,6 @@ describe("ProductRepository test", () => {
   });
 
   it("should find a product", async () => {
-    const productRepository = new ProductRepository();
-
     ProductModel.create({
       id: "1",
       name: "Product 1",
@@ -61,6 +59,8 @@ describe("ProductRepository test", () => {
       createdAt: new Date(),
       updatedAt: new Date(),
     });
+
+    const productRepository = new ProductRepository();
 
     const product = await productRepository.find("1");
 

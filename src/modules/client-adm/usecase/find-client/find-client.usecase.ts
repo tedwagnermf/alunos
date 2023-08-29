@@ -1,7 +1,7 @@
 import Id from "../../../@shared/domain/value-object/id.value-object";
 import Client from "../../domain/client.entity";
 import ClientGateway from "../../gateway/client.gateway";
-import { FindClientInputDto, FindClientOutputDto } from "../Client.dto";
+import { FindClientInputDto, FindClientOutputDto } from "../Client.usecase.dto";
 
 export default class FindClientUseCase {
   private _repository: ClientGateway;
